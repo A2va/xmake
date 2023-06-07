@@ -24,7 +24,7 @@ jobs:
           dnf -y install copr-cli make gcc-c++
           dnf -y install perl
           dnf -y upgrade git
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: true
       - name: Prepare local xmake

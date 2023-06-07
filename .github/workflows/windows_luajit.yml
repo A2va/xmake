@@ -19,7 +19,7 @@ jobs:
         group: ${{ github.ref }}-${{ github.base_ref }}-${{ github.head_ref }}-${{ matrix.os }}-${{ matrix.arch }}-Windows-Luajit
         cancel-in-progress: true
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           # WyriHaximus/github-action-get-previous-tag@master need it
           fetch-depth: 0
@@ -108,15 +108,15 @@ jobs:
           Copy-Item shafile ./artifacts/${{env.RELEASE_NAME}}
 
         # upload artifacts
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: xmake-latest.${{env.RELEASE_NAME}}.exe
           path: artifacts/${{env.RELEASE_NAME}}/xmake.exe
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: xmake-latest.${{ env.RELEASE_NAME }}.zip
           path: artifacts/${{env.RELEASE_NAME}}/archive.zip
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: xmake-latest.${{ env.RELEASE_NAME }}.sha256
           path: artifacts/${{env.RELEASE_NAME}}/shafile

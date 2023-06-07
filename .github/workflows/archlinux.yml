@@ -23,7 +23,7 @@ jobs:
           pacman -Sy --noconfirm --needed mesa gcc-fortran glu
           git config --global --add safe.directory /__w/xmake/xmake
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: true
 
