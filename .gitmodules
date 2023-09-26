@@ -19,3 +19,6 @@
 [submodule "core/src/lz4/lz4"]
 	path = core/src/lz4/lz4
 	url = ../../xmake-io/xmake-core-lz4.git
+[submodule "core/src/toml-lua/toml-lua"]
+	path = core/src/toml-lua/toml-lua
+	url = https://github.com/LebJe/toml.lua.git

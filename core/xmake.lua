@@ -111,3 +111,5 @@ end
 if is_plat("windows") then
     includes("src/pdcurses")
 end
+
+includes("src/toml-lua")
