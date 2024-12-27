@@ -28,14 +28,9 @@ jobs:
         with:
           xmake-version: local#../xmake-source
 
-      - name: Setup Cosmocc
-        run: |
-          wget https://cosmo.zip/pub/cosmocc/cosmocc.zip
-          unzip cosmocc.zip
-          ls -la cosmocc/bin/
-          export PATH="$PWD/cosmocc/bin:$PATH"
-          echo "$PWD/cosmocc/bin" >> $GITHUB_PATH
-          cosmocc --version
+      - uses: bjia56/setup-cosmocc@main
+        with:
+          version: "3.9.7"
 
       - name: Build
         run: |
