@@ -28,6 +28,13 @@ jobs:
         with:
           xmake-version: local#../xmake-source
 
+      - name: Setup Cosmocc
+        run: |
+          wget https://cosmo.zip/pub/cosmocc/cosmocc.zip
+          unzip cosmocc.zip
+          export PATH="$PWD/cosmocc/bin:$PATH"
+          echo "$PWD/cosmocc/bin" >> $GITHUB_PATH
+
       - name: Build
         run: |
           cd core
