@@ -28,11 +28,6 @@ jobs:
         with:
           xmake-version: local#../xmake-source
 
-      - name: Installation
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y dmd dub
-
       - name: Build
         run: |
           cd core
