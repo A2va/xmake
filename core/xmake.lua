@@ -51,7 +51,7 @@ end
 -- set cosmocc toolchain, e.g. xmake f -p linux --cosmocc=y
 if has_config("cosmocc") then
     -- add_requires("cosmocc")
-    -- set_toolchains("@cosmocc")
+    set_toolchains("cosmocc")
     set_policy("build.ccache", false)
 end
 
