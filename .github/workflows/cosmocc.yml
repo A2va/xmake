@@ -46,7 +46,7 @@ jobs:
           core/build/xmake --version
           core/build/xmake lua -v -D tests/run.lua
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: xmake-linux-x86_64
           path: core/build/xmake
