@@ -39,7 +39,6 @@ end]]
 -- for the windows platform (msvc)
 if is_plat("windows") then
     set_runtimes("MT")
-    add_ldflags("-nodefaultlib:msvcrt.lib")
     add_links("kernel32", "user32", "gdi32")
 end
 
@@ -131,7 +130,14 @@ if is_plat("windows") then
 end
 
 -- add projects
-includes("src/sv", "src/lz4", "src/tbox", "src/xmake", "src/cli")
+includes("src/sv", "src/lz4", "src/xmake", "src/cli")
+if namespace then
+    namespace("tbox", function ()
+        includes("src/tbox")
+    end)
+else
+    includes("src/tbox")
+end
 if has_config("lua_cjson") then
     includes("src/lua-cjson")
 end
