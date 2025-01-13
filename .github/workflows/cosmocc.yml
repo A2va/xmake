@@ -39,13 +39,22 @@ jobs:
           xmake -v
           cd ..
 
+      - name: Prepare
+        run: |
+          sudo apt update
+          sudo apt install -y ruby ruby-dev rubygems build-essential llvm libc++-dev
+          sudo apt install -y libgl1-mesa-dev libglu1-mesa-dev
+          clang --version
+          xrepo install -y zig
+
       - name: Tests
         run: |
           ls -l core/build/
           core/build/xmake --version
           core/build/xmake lua -v -D tests/run.lua
 
-      - uses: actions/upload-artifact@v4
+      - name: Artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: xmake-linux-x86_64
+          name: xmake-cosmocc-x86_64
           path: core/build/xmake
