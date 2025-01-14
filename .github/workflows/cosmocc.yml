@@ -35,7 +35,7 @@ jobs:
       - name: Build
         run: |
           cd core
-          xmake f -p linux --cosmocc=y --embed=y -y -cvD
+          xmake f -p linux -m debug --cosmocc=y --embed=y -y -cvD
           xmake -v
           cd ..
 
