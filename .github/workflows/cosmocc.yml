@@ -28,6 +28,10 @@ jobs:
         with:
           xmake-version: local#../xmake-source
 
+      - uses: bjia56/setup-cosmocc@main
+        with:
+          version: "4.0.2"
+
       - name: Build
         run: |
           cd core
