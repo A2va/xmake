@@ -8,8 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [macos-14-large]
-        arch: [x86_64]
+        os: [macos-14]
 
     runs-on: ${{ matrix.os }}
 
@@ -32,8 +31,6 @@ jobs:
 
       - name: Installation
         run: |
-          brew install dmd
-          brew install dub
           brew install llvm
           brew install mesa
 
