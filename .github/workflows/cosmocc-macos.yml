@@ -32,6 +32,8 @@ jobs:
 
       - name: Installation
         run: |
+          brew install dmd
+          brew install dub
           brew install llvm
           brew install mesa
 
