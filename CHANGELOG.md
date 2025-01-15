@@ -8,7 +8,9 @@
 * [#5995](https://github.com/xmake-io/xmake/pull/5995): Add profile support for vs generator
 * [#5949](https://github.com/xmake-io/xmake/pull/5949): Add rule nodejs.module
 * [#3380](https://github.com/xmake-io/xmake/issues/3380): Add namespace support
-* [#5945](https://github.com/xmake-io/xmake/issues/5945): check pkgconfig/cmake importfiles for package
+* [#5945](https://github.com/xmake-io/xmake/issues/5945): Check pkgconfig/cmake importfiles for package
+* [#6054](https://github.com/xmake-io/xmake/issues/6054): Add xmake bundle for linux
+* [#6071](https://github.com/xmake-io/xmake/issues/6071): Improve to download package for git url, support for sparse-checkout
 
 ### Bugs fixed
 
@@ -1939,6 +1941,8 @@
 * [#5949](https://github.com/xmake-io/xmake/pull/5949): 添加 nodejs.module 规则
 * [#3380](https://github.com/xmake-io/xmake/issues/3380): 添加命名空间支持
 * [#5945](https://github.com/xmake-io/xmake/issues/5945): 检测 pkgconfig/cmake 导入文件
+* [#6054](https://github.com/xmake-io/xmake/issues/6054): 为 linux 添加 xmake bundle 包
+* [#6071](https://github.com/xmake-io/xmake/issues/6071): 改进 git 包下载，支持仅仅 clone 指定子目录
 
 ### Bugs 修复
 
