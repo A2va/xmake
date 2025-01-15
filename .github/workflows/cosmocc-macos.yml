@@ -42,6 +42,14 @@ jobs:
           xmake -v
           cd ..
 
+      # In the tests, cmake tries to use make from the cosmopolitan toolchain and fails, so uninstall it
+      - name: Remove cosmocc
+        run: |
+          INSTALL_DIR="${{runner.temp}}/cosmocc-4.0.2"
+          echo "Removing cosmocc from PATH"
+          echo "::remove-path::${INSTALL_DIR}/bin"
+          rm -r "${INSTALL_DIR}"
+
       - name: Tests
         run: |
           ls -l core/build/
