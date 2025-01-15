@@ -34,8 +34,6 @@ jobs:
         run: |
           brew install dmd
           brew install dub
-          brew install llvm
-          brew install mesa
 
       - name: Build
         run: |
