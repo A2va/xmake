@@ -247,7 +247,7 @@ tb_int_t xm_bloom_filter_set(lua_State* lua);
 tb_int_t xm_bloom_filter_data_set(lua_State* lua);
 
 // the windows functions
-#ifdef TB_CONFIG_OS_WINDOWS
+#if defined(TB_CONFIG_OS_WINDOWS) || defined(__COSMOPOLITAN__)
 tb_int_t xm_winos_cp_info(lua_State* lua);
 tb_int_t xm_winos_console_cp(lua_State* lua);
 tb_int_t xm_winos_console_output_cp(lua_State* lua);
@@ -380,7 +380,7 @@ static luaL_Reg const g_os_functions[] =
 };
 
 // the windows functions
-#ifdef TB_CONFIG_OS_WINDOWS
+#if defined(TB_CONFIG_OS_WINDOWS) || defined(__COSMOPOLITAN__)
 static luaL_Reg const g_winos_functions[] =
 {
     { "cp_info",             xm_winos_cp_info           }
@@ -1353,7 +1353,7 @@ xm_engine_ref_t xm_engine_init(tb_char_t const* name, xm_engine_lni_initalizer_c
         xm_lua_register(engine->lua, "sandbox", g_sandbox_functions);
 
         // bind windows functions
-#ifdef TB_CONFIG_OS_WINDOWS
+#if defined(TB_CONFIG_OS_WINDOWS) || defined(__COSMOPOLITAN__)
         xm_lua_register(engine->lua, "winos", g_winos_functions);
 #endif
 
