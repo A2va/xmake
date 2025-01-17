@@ -392,7 +392,7 @@ static luaL_Reg const g_winos_functions[] =
 ,   { "registry_query",      xm_winos_registry_query    }
 ,   { "registry_keys",       xm_winos_registry_keys     }
 ,   { "registry_values",     xm_winos_registry_values   }
-,   { "short_path",          xm_winos_short_path        }
+// ,   { "short_path",          xm_winos_short_path        }
 ,   { tb_null,               tb_null                    }
 };
 #endif

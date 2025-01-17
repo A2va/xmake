@@ -45,6 +45,7 @@ target("xmake")
     add_files("**.c|winos/*.c")
     if is_plat("windows", "msys", "mingw", "cygwin") or has_config("cosmocc") then
         add_files("winos/*.c")
+        remove_files("winos/short_path.c")
     end
 
     -- add options
