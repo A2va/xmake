@@ -25,10 +25,11 @@
  * includes
  */
 #include "../prefix.h"
-#ifdef TB_CONFIG_OS_WINDOWS
-#   include <windows.h>
+#if __COSMOPOLITAN__
+    #include <nt/windows.h>
+#elif TB_CONFIG_OS_WINDOWS
+    #include <windows.h>
 #endif
-
 
 #endif
 
