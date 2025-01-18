@@ -46,6 +46,7 @@ target("xmake")
     if is_plat("windows", "msys", "mingw", "cygwin") or has_config("cosmocc") then
         add_files("winos/*.c")
         remove_files("winos/short_path.c")
+        remove_files("winos/logical_drives.c")
     end
 
     -- add options

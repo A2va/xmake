@@ -27,8 +27,6 @@
 #include "../prefix.h"
 #if __COSMOPOLITAN__
     #include <windowsesque.h>
-    #include <libc/nt/registry.h>
- 
     // #define RegQueryInfoKeyW RegQueryInfoKey
 #elif TB_CONFIG_OS_WINDOWS
     #include <windows.h>
