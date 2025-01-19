@@ -32,6 +32,11 @@
     #define RegOpenKeyExW RegOpenKeyEx
     #define RegQueryInfoKeyW RegQueryInfoKey
     #define RegEnumKeyExW RegEnumKeyEx
+
+    #define HKEY PHKEY
+
+    // Temp def until PR is made to cosmopolitan
+    #define KEY_QUERY_VALUE         (0x0001)
 #elif TB_CONFIG_OS_WINDOWS
     #include <windows.h>
 #endif
