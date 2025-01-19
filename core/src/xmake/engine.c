@@ -383,11 +383,11 @@ static luaL_Reg const g_os_functions[] =
 #if defined(TB_CONFIG_OS_WINDOWS) || defined(__COSMOPOLITAN__)
 static luaL_Reg const g_winos_functions[] =
 {
-    { "cp_info",             xm_winos_cp_info           }
-,   { "console_cp",          xm_winos_console_cp        }
-,   { "console_output_cp",   xm_winos_console_output_cp }
-,   { "oem_cp",              xm_winos_oem_cp            }
-,   { "ansi_cp",             xm_winos_ansi_cp           }
+    // { "cp_info",             xm_winos_cp_info           }
+// ,   { "console_cp",          xm_winos_console_cp        }
+// ,   { "console_output_cp",   xm_winos_console_output_cp }
+// ,   { "oem_cp",              xm_winos_oem_cp            }
+// ,   { "ansi_cp",             xm_winos_ansi_cp           }
 // ,   { "logical_drives",      xm_winos_logical_drives    }
 ,   { "registry_query",      xm_winos_registry_query    }
 ,   { "registry_keys",       xm_winos_registry_keys     }

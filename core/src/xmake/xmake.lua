@@ -47,6 +47,7 @@ target("xmake")
         add_files("winos/*.c")
         remove_files("winos/short_path.c")
         remove_files("winos/logical_drives.c")
+        remove_files("winos/ansi.c")
     end
 
     -- add options
