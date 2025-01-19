@@ -29,7 +29,9 @@
     #define typeof __typeof
     #include <windowsesque.h>
     #undef typeof
-    // #define RegQueryInfoKeyW RegQueryInfoKey
+    #define RegOpenKeyExW RegOpenKeyEx
+    #define RegQueryInfoKeyW RegQueryInfoKey
+    #define RegEnumKeyExW RegEnumKeyEx
 #elif TB_CONFIG_OS_WINDOWS
     #include <windows.h>
 #endif
