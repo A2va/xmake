@@ -37,6 +37,7 @@
     #define RegOpenKeyExW RegOpenKeyEx
     #define RegQueryInfoKeyW RegQueryInfoKey
     #define RegEnumKeyExW RegEnumKeyEx
+    #define RegEnumValueW RegEnumValue
 
     // Temp def until PR is made to cosmopolitan
     #define KEY_QUERY_VALUE         (0x0001)
