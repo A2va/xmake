@@ -26,7 +26,9 @@
  */
 #include "../prefix.h"
 #if __COSMOPOLITAN__
+    #define typeof __typeof
     #include <windowsesque.h>
+    #undef typeof
     // #define RegQueryInfoKeyW RegQueryInfoKey
 #elif TB_CONFIG_OS_WINDOWS
     #include <windows.h>
