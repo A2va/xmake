@@ -29,11 +29,14 @@
     #define typeof __typeof
     #include <windowsesque.h>
     #undef typeof
+   
+    // In the cosmopolitan windowsesque header HKEY is defined as int64_t and not a pointer
+    #undef HKEY
+    #define HKEY int64_t*
+
     #define RegOpenKeyExW RegOpenKeyEx
     #define RegQueryInfoKeyW RegQueryInfoKey
     #define RegEnumKeyExW RegEnumKeyEx
-
-    #define HKEY PHKEY
 
     // Temp def until PR is made to cosmopolitan
     #define KEY_QUERY_VALUE         (0x0001)
