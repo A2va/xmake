@@ -31,8 +31,8 @@
     #undef typeof
    
     // In the cosmopolitan windowsesque header HKEY is defined as int64_t and not a pointer
-    #undef HKEY
-    #define HKEY int64_t*
+    // #undef HKEY
+    // #define HKEY int64_t*
 
     #define RegOpenKeyExW RegOpenKeyEx
     #define RegQueryInfoKeyW RegQueryInfoKey
